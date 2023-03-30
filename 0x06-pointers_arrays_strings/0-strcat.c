@@ -1,25 +1,27 @@
 #include "main.h"
 
 /**
- * _strcat - function declaration
- * @dest: second string
- * @src: first string
- * Return: charcter
+ * _strcat - concat 2 string
+ * @dest:char
+ * @src:char
+ * Return:char
  */
-
 char *_strcat(char *dest, char *src)
 {
-	int dest_index;
-	int src_index;
+	char *s = dest;
 
-	for (dest_index = 0; dest[dest_index] != '\0'; dest_index++)
-	{}
-
-	for (src_index = 0; src[src_index] != '\0'; src_index++)
+	while (*dest != '\0')
 	{
-		dest[dest_index + src_index] = src[src_index];
+		dest++;
 	}
-	dest[dest_index + src_index] = '\0';
 
-	return (dest);
+	while (*src != '\0')
+	{
+		*dest = *src;
+		dest++;
+		src++;
+	}
+	*dest = '\0';
+	return (s);
 }
+
