@@ -7,19 +7,19 @@
  * @src: the source address
  * @n: number of times to copy
  *
- * Return: dest.
+ * Return: dest
  */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
 
-	unsigned int x;
+	unsigned int index;
 
-	while (x < n)
+	while (index < n)
 
 	{
-		dest[x] = src[x];
-		x++;
+		dest[index] = src[index];
+		index++;
 	}
 	return (dest);
 }
